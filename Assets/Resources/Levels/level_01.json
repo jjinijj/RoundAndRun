@@ -1,0 +1,29 @@
+{
+    "tiles": [
+        "Empty",
+        "Empty",
+        "Empty",
+        "Empty",
+        "Empty",
+        "JumpObstacle",
+        "Empty",
+        "Empty",
+        "Empty",
+        "Empty",
+        "Empty",
+        "SlideObstacle",
+        "Empty",
+        "Empty",
+        "Empty",
+        "Item",
+        "Item",
+        "Item",
+        "Item",
+        "Item",
+        "ItemJump",
+        "Item",
+        "Item",
+        "Item",
+        "JumpObstacle"
+    ]
+}
