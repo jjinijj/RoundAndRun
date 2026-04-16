@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -7050398750579132353}
   - component: {fileID: -651014924373243193}
   m_Layer: 0
-  m_Name: ForestGround_Jump
+  m_Name: ForestGround_Jump_Long
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f361ef6c491c4bf1b5b2e153b269371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 1
+  tileType: 2
   tileLength: 1
   item: {fileID: 0}
 --- !u!65 &-651014924373243193

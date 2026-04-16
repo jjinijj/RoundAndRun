@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public enum TileType { Empty, JumpObstacle, SlideObstacle, Item, ItemJump }
+public enum TileType { Empty, JumpObstacle_Short, JumpObstacle_Long, SlideObstacle, Item, ItemJump }
 public class Tile : MonoBehaviour
 {
     public TileType tileType;

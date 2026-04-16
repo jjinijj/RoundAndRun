@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f361ef6c491c4bf1b5b2e153b269371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 4
+  tileType: 5
   tileLength: 1
   item: {fileID: 7785050098082095037}
 --- !u!65 &2305144883793297710

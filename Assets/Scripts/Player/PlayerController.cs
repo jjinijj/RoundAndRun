@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
-    [SerializeField] private float jumpForce = 8f;
+    [SerializeField] private float jumpForce = 10f;
     [SerializeField] private float gravity = -20f;
     [SerializeField] private float maxJumpHeight = 2f; // 맥스 높이
 
