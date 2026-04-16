@@ -27,9 +27,6 @@ public class InputHandler : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.DownArrow))
             playerController.OnSlideStart();
 
-        if (Input.GetKey(KeyCode.DownArrow))
-            playerController.OnSlideStart();
-
         if (Input.GetKeyUp(KeyCode.DownArrow))
             playerController.OnSlideEnd();
     }

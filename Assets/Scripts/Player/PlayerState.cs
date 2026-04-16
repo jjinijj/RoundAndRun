@@ -17,17 +17,17 @@ public class PlayerState : ScriptableObject
     {
         if (isDead) return;
         score += amount;
-        onChangeScore(score);
+        onChangeScore?.Invoke(score);
     }
 
     public void OnHitObstacle()
     {
         life--;
-        onChangeLife(life);
+        onChangeLife?.Invoke(life);
         if (life <= 0)
         {
             isDead = true;
-            onDead();   
+            onDead?.Invoke();
         }
     }
 
@@ -36,7 +36,7 @@ public class PlayerState : ScriptableObject
         score = 0;
         life = 5;
         isDead = false;
-        onChangeLife(life);
-        onChangeScore(score);
+        onChangeLife?.Invoke(life);
+        onChangeScore?.Invoke(score);
     }
 }
