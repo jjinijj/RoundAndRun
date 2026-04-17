@@ -101,6 +101,7 @@ MonoBehaviour:
   tileType: 1
   tileLength: 1
   item: {fileID: 0}
+  obstacle: {fileID: 5606768257917352877}
 --- !u!65 &-651014924373243193
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -206,6 +207,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9021979860543945138, guid: e02b31792a067c74a81e275fcda3930b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6258291757910935434}
+    - targetCorrespondingSourceObject: {fileID: 9021979860543945138, guid: e02b31792a067c74a81e275fcda3930b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5246394210804985436}
+    - targetCorrespondingSourceObject: {fileID: 9021979860543945138, guid: e02b31792a067c74a81e275fcda3930b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5606768257917352877}
   m_SourcePrefab: {fileID: 100100000, guid: e02b31792a067c74a81e275fcda3930b, type: 3}
 --- !u!4 &2312312239677450249 stripped
 Transform:
@@ -240,3 +247,33 @@ CapsuleCollider:
   m_Height: 2.4438257
   m_Direction: 1
   m_Center: {x: 0, y: 0.24871472, z: -0.006569177}
+--- !u!114 &5246394210804985436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3124701096622387891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &5606768257917352877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3124701096622387891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65a1b12f650fc4102bfd4c236d98add7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
