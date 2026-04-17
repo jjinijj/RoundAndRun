@@ -5,7 +5,7 @@ using System.Collections;
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private float normalY = 0f;
-    [SerializeField] private float slideY = -0.3f;
+    [SerializeField] private float slideY = -0.2f;
     [SerializeField] private float transitionSpeed = 10f;
     [SerializeField] private float bobFrequency = 5f;
     [SerializeField] private float bobAmplitude = 0.05f;
@@ -42,13 +42,13 @@ public class CameraController : MonoBehaviour
         Vector3 pos = transform.localPosition;
         pos.y = Mathf.Lerp(pos.y, targetY, Time.deltaTime * transitionSpeed);
 
-        Quaternion rot = Quaternion.Lerp(
-            transform.localRotation,
-            Quaternion.Euler(targetRotation),
-            Time.deltaTime * transitionSpeed
-        );
+        //Quaternion rot = Quaternion.Lerp(
+        //    transform.localRotation,
+        //    Quaternion.Euler(targetRotation),
+        //    Time.deltaTime * transitionSpeed
+        //);
 
-        transform.SetLocalPositionAndRotation(pos, rot);
+        transform.SetLocalPositionAndRotation(pos, initRotation);
     }
 
     public void StartRun()

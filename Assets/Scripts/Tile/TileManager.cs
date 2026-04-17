@@ -6,7 +6,8 @@ public class TileManager : MonoBehaviour
 {
     [Header("Tile Prefabs")]
     [SerializeField] private Tile emptyTilePrefab;
-    [SerializeField] private Tile jumpObstacleTilePrefab;
+    [SerializeField] private Tile jumpObstacleTileShortPrefab;
+    [SerializeField] private Tile jumpObstacleTileLongPrefab;
     [SerializeField] private Tile slideObstacleTilePrefab;
     [SerializeField] private Tile itemTilePrefab;
     [SerializeField] private Tile itemJumpTilePrefab;
@@ -29,7 +30,8 @@ public class TileManager : MonoBehaviour
     {
         levelSequence = GetComponent<LevelLoader>().Load();
         InitPool(TileType.Empty, emptyTilePrefab);
-        InitPool(TileType.JumpObstacle, jumpObstacleTilePrefab);
+        InitPool(TileType.JumpObstacle_Short, jumpObstacleTileShortPrefab);
+        InitPool(TileType.JumpObstacle_Long, jumpObstacleTileLongPrefab);
         InitPool(TileType.SlideObstacle, slideObstacleTilePrefab);
         InitPool(TileType.Item, itemTilePrefab);
         InitPool(TileType.ItemJump, itemJumpTilePrefab);
@@ -96,7 +98,8 @@ public class TileManager : MonoBehaviour
     Tile GetPrefab(TileType type) => type switch
     {
         TileType.Empty => emptyTilePrefab,
-        TileType.JumpObstacle => jumpObstacleTilePrefab,
+        TileType.JumpObstacle_Short => jumpObstacleTileShortPrefab,
+        TileType.JumpObstacle_Long => jumpObstacleTileLongPrefab,
         TileType.SlideObstacle => slideObstacleTilePrefab,
         TileType.Item => itemTilePrefab,
         TileType.ItemJump=>itemJumpTilePrefab,

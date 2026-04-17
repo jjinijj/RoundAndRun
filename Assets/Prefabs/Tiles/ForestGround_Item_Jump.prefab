@@ -98,9 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f361ef6c491c4bf1b5b2e153b269371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileType: 4
+  tileType: 5
   tileLength: 1
-  item: {fileID: 7785050098082095037}
+  item: {fileID: 3765443110722765121}
+  obstacle: {fileID: 0}
 --- !u!65 &2305144883793297710
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -204,9 +205,6 @@ PrefabInstance:
       addedObject: {fileID: 5298653273926707841}
     - targetCorrespondingSourceObject: {fileID: 3547536226201909616, guid: 3a800ed0d14be4131a627bb5da64fcd5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7785050098082095037}
-    - targetCorrespondingSourceObject: {fileID: 3547536226201909616, guid: 3a800ed0d14be4131a627bb5da64fcd5, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2562480838648338805}
   m_SourcePrefab: {fileID: 100100000, guid: 3a800ed0d14be4131a627bb5da64fcd5, type: 3}
 --- !u!4 &3738863356618805848 stripped
@@ -214,6 +212,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4211061134681727946, guid: 3a800ed0d14be4131a627bb5da64fcd5, type: 3}
   m_PrefabInstance: {fileID: 690086086442316178}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3765443110722765121 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4768705982508830509, guid: 3a800ed0d14be4131a627bb5da64fcd5, type: 3}
+  m_PrefabInstance: {fileID: 690086086442316178}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4082738209770784994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dcd4c63924a14eed877030729b95355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4082738209770784994 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3547536226201909616, guid: 3a800ed0d14be4131a627bb5da64fcd5, type: 3}
@@ -246,19 +255,6 @@ MonoBehaviour:
   isScaling: 1
   useEasingForScaling: 1
   scaleLerpSpeed: 1
---- !u!114 &7785050098082095037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4082738209770784994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dcd4c63924a14eed877030729b95355, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 50
 --- !u!136 &2562480838648338805
 CapsuleCollider:
   m_ObjectHideFlags: 0

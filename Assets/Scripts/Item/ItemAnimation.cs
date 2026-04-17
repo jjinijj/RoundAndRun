@@ -24,10 +24,12 @@ public class ItemAnimation : MonoBehaviour
         public float scaleLerpSpeed = 1f; // Speed of scaling transition
         private float scaleTimer;
 
-        void Start()
+        void OnEnable()
         {
             initialScale = transform.localScale;
             initialPosition = transform.localPosition;
+            floatTimer = 0f;
+            scaleTimer = 0f;
 
             // Adjust start and end scale based on initial scale
             startScale = initialScale;

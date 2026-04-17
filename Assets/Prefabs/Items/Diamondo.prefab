@@ -62,14 +62,17 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8b76e94f4294db842928c1d103f1afce, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6172963929711760559}
+      addedObject: {fileID: 8876378949392853659}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8b76e94f4294db842928c1d103f1afce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4768705982508830509}
   m_SourcePrefab: {fileID: 100100000, guid: 8b76e94f4294db842928c1d103f1afce, type: 3}
 --- !u!1 &3547536226201909616 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8b76e94f4294db842928c1d103f1afce, type: 3}
   m_PrefabInstance: {fileID: 4465891562740843553}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6172963929711760559
+--- !u!114 &8876378949392853659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,20 +81,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 3547536226201909616}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 845c415f3181b4840ab566c40e714752, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRotating: 1
-  rotateX: 0
-  rotateY: 1
-  rotateZ: 0
-  rotationSpeed: 85.67
-  isFloating: 1
-  useEasingForFloating: 1
-  floatHeight: 1.93
-  floatSpeed: 0.4
-  startScale: {x: 1, y: 1, z: 1}
-  endScale: {x: 1.2, y: 1.2, z: 1.2}
-  isScaling: 1
-  useEasingForScaling: 1
-  scaleLerpSpeed: 1.11
+  outlineMode: 1
+  outlineColor: {r: 0, g: 1, b: 0.08627451, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &-4768705982508830509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3547536226201909616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dcd4c63924a14eed877030729b95355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 50
+  outline: {fileID: 8876378949392853659}

@@ -11,7 +11,13 @@ public class LevelLoader : MonoBehaviour
         TileType[] result = new TileType[data.tiles.Length];
 
         for (int i = 0; i < data.tiles.Length; i++)
-            result[i] = Enum.Parse<TileType>(data.tiles[i]);
+        {
+            if (!Enum.TryParse(data.tiles[i], out result[i]))
+            {
+                Debug.LogWarning($"LevelLoader: 알 수 없는 TileType '{data.tiles[i]}', Empty로 대체합니다.");
+                result[i] = TileType.Empty;
+            }
+        }
 
         return result;
     }
