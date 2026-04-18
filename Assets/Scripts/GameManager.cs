@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayerState playerState;
     [SerializeField] private PlayerController playerController;
     [SerializeField] private TileManager tileManager;
+    [SerializeField] private BGTileManager bgTileManager;
+    
     [SerializeField] private CameraController cameraController;
     [SerializeField] private UIManager uimanager;
     // GameManager
@@ -30,6 +32,7 @@ public class GameManager : MonoBehaviour
         playerController.OnRun();
 
         tileManager.StartGame();
+        bgTileManager.StartGame();
         cameraController.StartRun();
 
         uimanager.ShowIngameUI();
@@ -40,6 +43,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("게임오버");
         playerController.OnDead();
         tileManager.PauseGame();
+        bgTileManager.PauseGame();
         cameraController.PlayDeadCamera();
 
         uimanager.ShowEndUI();

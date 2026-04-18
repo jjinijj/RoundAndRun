@@ -13,7 +13,7 @@ public class TileManager : MonoBehaviour
     [SerializeField] private Tile itemJumpTilePrefab;
 
     [Header("Settings")]
-    [SerializeField] private float tileSpeed = 10f;
+    [SerializeField] private GameSettings gameSettings;
     [SerializeField] private int initialTileCount = 5; // 시작 시 깔아둘 타일 수
 
     private Dictionary<TileType, Queue<Tile>> pools = new();
@@ -109,7 +109,7 @@ public class TileManager : MonoBehaviour
     void MoveTiles()
     {
         foreach (var tile in activeTiles)
-            tile.transform.position += Vector3.back * tileSpeed * Time.deltaTime;
+            tile.transform.position += Vector3.back * gameSettings.tileSpeed * Time.deltaTime;
     }
 
     void CheckRecycle()

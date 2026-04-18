@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 4
-  tileLength: 1
+  tileLength: 2
   item: {fileID: 724420326216147149}
   obstacle: {fileID: 0}
 --- !u!65 &2305144883793297710

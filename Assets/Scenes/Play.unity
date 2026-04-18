@@ -201,6 +201,40 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &93748319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 93748320}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &93748320
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93748319}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1878235624}
+  - {fileID: 169739429}
+  - {fileID: 999786933}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &111897283
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,6 +537,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156298927}
   m_CullTransparentMesh: 1
+--- !u!1 &169739428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 169739429}
+  - component: {fileID: 169739430}
+  m_Layer: 0
+  m_Name: BGTileManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &169739429
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169739428}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 93748320}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &169739430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169739428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b918c97d8d1fb492c9cc8a0c47644f9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  themeData: {fileID: 11400000, guid: 3c1f9e8a9ad4e40fda5cf981a95cb0a2, type: 2}
+  gameSettings: {fileID: 11400000, guid: 89f8e78af314c495eafd4b0fd960bcae, type: 2}
+  tileLength: 2
+  tileY: -1
+  xOffset: 2
+  initialTileCount: 20
+  player: {fileID: 8833578768899292240}
 --- !u!1 &222621942
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,7 +955,7 @@ Transform:
   m_GameObject: {fileID: 446868591}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2235,12 +2320,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999786931}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 93748320}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1001604507
 GameObject:
@@ -3609,6 +3694,7 @@ MonoBehaviour:
   playerState: {fileID: 11400000, guid: 5ed1d0573c05f45daaf7066437d80864, type: 2}
   playerController: {fileID: 8833578768899292237}
   tileManager: {fileID: 1878235623}
+  bgTileManager: {fileID: 169739430}
   cameraController: {fileID: 888004969}
   uimanager: {fileID: 999786932}
 --- !u!4 &1485948468
@@ -3619,7 +3705,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485948466}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4004,7 +4090,7 @@ MonoBehaviour:
   slideObstacleTilePrefab: {fileID: -2915000272360682753, guid: 581f50523ee4e477ba8eb160fb939bbb, type: 3}
   itemTilePrefab: {fileID: -2830685812547561176, guid: 7aedaf2e3b9d249109014a67e9cd9d7f, type: 3}
   itemJumpTilePrefab: {fileID: -2830685812547561176, guid: 7f8843547d51c45f8a0316bdffd6cdf3, type: 3}
-  tileSpeed: 5
+  gameSettings: {fileID: 11400000, guid: 89f8e78af314c495eafd4b0fd960bcae, type: 2}
   initialTileCount: 20
   player: {fileID: 8833578768899292240}
 --- !u!4 &1878235624
@@ -4015,12 +4101,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878235622}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 93748320}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1878235625
 MonoBehaviour:
@@ -4554,7 +4640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 8
   gravity: -20
-  maxJumpHeight: 2
+  maxJumpHeight: 1.6
   groundCheck: {fileID: 1242279194}
   groundDistance: 0.2
   groundMask:
@@ -4629,9 +4715,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 705507995}
   - {fileID: 1034979938}
-  - {fileID: 1878235624}
   - {fileID: 1485948468}
-  - {fileID: 999786933}
+  - {fileID: 93748320}
   - {fileID: 335681839}
   - {fileID: 1152342657}
   - {fileID: 2064653021}
