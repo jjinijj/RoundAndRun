@@ -1,5 +1,6 @@
 [System.Serializable]
 public class LevelData
 {
-    public string[] tiles;
+    public string theme;
+    public TileData[] tiles;
 }

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80509a86cda964e12948cb8913d7b329, type: 3}
   m_Name: GameSettings
   m_EditorClassIdentifier: 
-  tileSpeed: 3
+  tileSpeed: 5

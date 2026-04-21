@@ -1,29 +1,149 @@
 {
+    "theme": "",
     "tiles": [
-        "Empty",
-        "Empty",
-        "Empty",
-        "Empty",
-        "Empty",
-        "JumpObstacle_Short",
-        "Empty",
-        "Empty",
-        "Empty",
-        "Empty",
-        "Empty",
-        "SlideObstacle",
-        "Empty",
-        "Empty",
-        "Empty",
-        "Item",
-        "Item",
-        "Item",
-        "Item",
-        "Item",
-        "ItemJump",
-        "Item",
-        "Item",
-        "Item",
-        "JumpObstacle_Long"
+        {
+            "tile": "Empty",
+            "obstacleId": "",
+            "itemId": "",
+            "height": 0.0
+        },
+        {
+            "tile": "Empty",
+            "obstacleId": "",
+            "itemId": "",
+            "height": 0.0
+        },
+        {
+            "tile": "Empty",
+            "obstacleId": "",
+            "itemId": "",
+            "height": 0.0
+        },
+        {
+            "tile": "Empty",
+            "obstacleId": "",
+            "itemId": "",
+            "height": 0.0
+        },
+        {
+            "tile": "Empty",
+            "obstacleId": "",
+            "itemId": "",
+            "height": 0.0
+        },
+        {
+            "tile": "Obstacle",
+            "obstacleId": "obstacle__001",
+            "itemId": "",
+            "height": 0.0
+        },
+        {
+            "tile": "Empty",
+            "obstacleId": "",
+            "itemId": "",
+            "height": 0.0
+        },
+        {
+            "tile": "Empty",
+            "obstacleId": "",
+            "itemId": "",
+            "height": 0.0
+        },
+        {
+            "tile": "Item",
+            "obstacleId": "",
+            "itemId": "item__001",
+            "height": 1.0
+        },
+        {
+            "tile": "Empty",
+            "obstacleId": "",
+            "itemId": "",
+            "height": 0.0
+        },
+        {
+            "tile": "Empty",
+            "obstacleId": "",
+            "itemId": "",
+            "height": 0.0
+        },
+        {
+            "tile": "Obstacle",
+            "obstacleId": "obstacle__003",
+            "itemId": "",
+            "height": 0.0
+        },
+        {
+            "tile": "Empty",
+            "obstacleId": "",
+            "itemId": "",
+            "height": 0.0
+        },
+        {
+            "tile": "Empty",
+            "obstacleId": "",
+            "itemId": "",
+            "height": 0.0
+        },
+        {
+            "tile": "Empty",
+            "obstacleId": "",
+            "itemId": "",
+            "height": 0.0
+        },
+        {
+            "tile": "Obstacle",
+            "obstacleId": "obstacle__004",
+            "itemId": "",
+            "height": 0.0
+        },
+        {
+            "tile": "Item",
+            "obstacleId": "",
+            "itemId": "item__001",
+            "height": 1.0
+        },
+        {
+            "tile": "Item",
+            "obstacleId": "",
+            "itemId": "item__001",
+            "height": 1.0
+        },
+        {
+            "tile": "Item",
+            "obstacleId": "",
+            "itemId": "item__002",
+            "height": 1.0
+        },
+        {
+            "tile": "Item",
+            "obstacleId": "",
+            "itemId": "item__002",
+            "height": 1.5
+        },
+        {
+            "tile": "Empty",
+            "obstacleId": "",
+            "itemId": "",
+            "height": 0.0
+        },
+        {
+            "tile": "Empty",
+            "obstacleId": "",
+            "itemId": "",
+            "height": 0.0
+        },
+        {
+            "tile": "Empty",
+            "obstacleId": "",
+            "itemId": "",
+            "height": 0.0
+        },
+        {
+            "tile": "Empty",
+            "obstacleId": "",
+            "itemId": "",
+            "height": 0.0
+        }
     ]
 }

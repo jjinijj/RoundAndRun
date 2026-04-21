@@ -581,7 +581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b918c97d8d1fb492c9cc8a0c47644f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  themeData: {fileID: 11400000, guid: 3c1f9e8a9ad4e40fda5cf981a95cb0a2, type: 2}
+  themeData: {fileID: 11400000, guid: f5835f1651a76482486e78d214c9372f, type: 2}
   gameSettings: {fileID: 11400000, guid: 89f8e78af314c495eafd4b0fd960bcae, type: 2}
   tileLength: 2
   tileY: -1
@@ -4084,13 +4084,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d16a03569f8ac4b68a900bf0692fbee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyTilePrefab: {fileID: -2147344879338495609, guid: 8a12185f7b49448c791371ed03ad6cb3, type: 3}
-  jumpObstacleTileShortPrefab: {fileID: -7050398750579132353, guid: 9bb1cf03add2c4a93a22b651ee0f348b, type: 3}
-  jumpObstacleTileLongPrefab: {fileID: -7050398750579132353, guid: 662134532c79d49aa80895b0f3556264, type: 3}
-  slideObstacleTilePrefab: {fileID: -2915000272360682753, guid: 581f50523ee4e477ba8eb160fb939bbb, type: 3}
-  itemTilePrefab: {fileID: -2830685812547561176, guid: 7aedaf2e3b9d249109014a67e9cd9d7f, type: 3}
-  itemJumpTilePrefab: {fileID: -2830685812547561176, guid: 7f8843547d51c45f8a0316bdffd6cdf3, type: 3}
+  emptyTilePrefab: {fileID: -1707000814117164951, guid: 65c1a0bda80774cdeba70f023b056526, type: 3}
+  obstacleTilePrefab: {fileID: -1707000814117164951, guid: 65c1a0bda80774cdeba70f023b056526, type: 3}
+  itemTilePrefab: {fileID: -1707000814117164951, guid: 65c1a0bda80774cdeba70f023b056526, type: 3}
   gameSettings: {fileID: 11400000, guid: 89f8e78af314c495eafd4b0fd960bcae, type: 2}
+  themeData: {fileID: 11400000, guid: f5835f1651a76482486e78d214c9372f, type: 2}
   initialTileCount: 20
   player: {fileID: 8833578768899292240}
 --- !u!4 &1878235624
