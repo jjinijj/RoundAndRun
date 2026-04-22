@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44290916c5a494d38a819714d88139f2, type: 3}
+  m_Name: CityTheme
+  m_EditorClassIdentifier: 
+  themeName: 
+  bgTilePrefabs:
+  - {fileID: 5454299119466096183, guid: 39c0f0148c9924afb8c6a4dbae83918e, type: 3}
+  decorationPrefabs:
+  - {fileID: 6248552797198535928, guid: 793f632a7d508432da2b57043f92a335, type: 3}
+  - {fileID: 8018598508486374101, guid: 1e6c312c8100743ad9068eeeb1ea361a, type: 3}
+  decorationSpawnChance: 0.3
+  obstacles:
+  - id: obstacle__001
+    displayName: 
+    prefab: {fileID: 1929430761899908252, guid: 138ce6d9edf5f42d4b3ffae3e8719af9, type: 3}
+  - id: obstacle__002
+    displayName: 
+    prefab: {fileID: 2560764095924264397, guid: a73bed913a74d4911865da1940dda50d, type: 3}
+  - id: obstacle__003
+    displayName: 
+    prefab: {fileID: 1994533738323041902, guid: d230e67ef5acc4ff884672f0bc5775b2, type: 3}
+  - id: obstacle__004
+    displayName: 
+    prefab: {fileID: 5483274458029530192, guid: f2a0b1edd4ad54a27aa78e838f6ce8c8, type: 3}
+  items:
+  - id: item__001
+    displayName: 
+    prefab: {fileID: 1115092350195915808, guid: c71c445a6afd6425797bb67fed8cccbb, type: 3}
+  - id: item__002
+    displayName: 
+    prefab: {fileID: 3547536226201909616, guid: 3a800ed0d14be4131a627bb5da64fcd5, type: 3}

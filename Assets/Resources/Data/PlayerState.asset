@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd51913054aad405e877b24f8ed0b584, type: 3}
   m_Name: PlayerState
   m_EditorClassIdentifier: 
-  score: 0
-  life: 5
+  gameSettings: {fileID: 11400000, guid: 89f8e78af314c495eafd4b0fd960bcae, type: 2}
+  score: 140
+  life: 2
   isDead: 0

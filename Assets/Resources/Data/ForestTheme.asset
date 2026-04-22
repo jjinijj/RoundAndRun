@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44290916c5a494d38a819714d88139f2, type: 3}
+  m_Name: ForestTheme
+  m_EditorClassIdentifier: 
+  themeName: 
+  bgTilePrefabs:
+  - {fileID: 7281618184335796151, guid: 8a12185f7b49448c791371ed03ad6cb3, type: 3}
+  decorationPrefabs:
+  - {fileID: 507032817324450796, guid: 8868e1e84d3f048dda8e90333aaa5ba2, type: 3}
+  - {fileID: 7756389396859774736, guid: b48b217ae8f9943f3b72c0f687164418, type: 3}
+  - {fileID: 1493658555795098399, guid: 87d016d5e25de4f22a593ef1f7cdaaed, type: 3}
+  - {fileID: 1900395126730662557, guid: dfdae2972b84b4ed48751f381504bb7a, type: 3}
+  - {fileID: 7012030255635994607, guid: 766a1639f465d4400a28d4a0a8879c23, type: 3}
+  decorationSpawnChance: 0.3

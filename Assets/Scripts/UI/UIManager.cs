@@ -8,7 +8,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject ingameUI;
     [SerializeField] GameObject endUI;
     [SerializeField] TextMeshProUGUI scoreText;
-    [SerializeField] TextMeshProUGUI lifeText;
+    [SerializeField] TextMeshProUGUI finalScoreText;
+    [SerializeField] Image lifeFill;
     [SerializeField] PlayerState playerState; 
 
     void Awake()
@@ -16,10 +17,14 @@ public class UIManager : MonoBehaviour
         Init();
     }
 
+    void Update()
+    {
+        UpdateScore();
+    }
+
     private void Init()
     {
         playerState.onChangeLife += ChangeLife;
-        playerState.onChangeScore += ChangeScore;
 
         initUI.SetActive(true);
         ingameUI.SetActive(false);
@@ -34,25 +39,26 @@ public class UIManager : MonoBehaviour
 
     public void ShowEndUI()
     {
+        finalScoreText.text = scoreText.text;
         initUI.SetActive(false);
         ingameUI.SetActive(false);
         endUI.SetActive(true);
     }
 
-    private void ChangeScore(int score)
+    private void UpdateScore()
     {
-        scoreText.text = score.ToString();
+        scoreText.text = playerState.Score.ToString();
     }
 
-    private void ChangeLife(int life)
+    private void ChangeLife(int life, int maxLife)
     {
-        lifeText.text = life.ToString();
+        if (lifeFill != null)
+            lifeFill.fillAmount = (float)life / maxLife;
     }
 
     void OnDestroy()
     {
         playerState.onChangeLife -= ChangeLife;
-        playerState.onChangeScore -= ChangeScore;
     }
 
 

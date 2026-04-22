@@ -7,6 +7,10 @@ public class Item : MonoBehaviour
     public int score = 10;
     [SerializeField] private Outline outline;
 
+    void Awake()
+    {
+        outline = GetComponent<Outline>();
+    }
     public void ResetItem()
     {
         gameObject.SetActive(true);
