@@ -5,8 +5,8 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] private float jumpForce = 10f;
-    [SerializeField] private float gravity = -20f;
-    [SerializeField] private float maxJumpHeight = 2f; // 맥스 높이
+    [SerializeField] private float gravity = -15;
+    [SerializeField] private float maxJumpHeight = 1.8f; // 맥스 높이
 
     [SerializeField] private Transform groundCheck;   // 발 위치 빈 오브젝트
     [SerializeField] private float groundDistance = 0.1f;

@@ -1,6 +1,7 @@
 #if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
+using UnityEditorInternal;
 using System.Collections.Generic;
 using System.IO;
 
@@ -10,11 +11,75 @@ public class MapEditorWindow : EditorWindow
     private List<TileData> tiles = new();
     private string levelName = "level_01";
     private Vector2 scrollPos;
+    private ReorderableList reorderableList;
 
     [MenuItem("Game/Map Editor")]
     public static void Open()
     {
         GetWindow<MapEditorWindow>("Map Editor");
+    }
+
+    void OnEnable()
+    {
+        BuildReorderableList();
+    }
+
+    void BuildReorderableList()
+    {
+        reorderableList = new ReorderableList(tiles, typeof(TileData), true, false, false, false)
+        {
+            elementHeight = EditorGUIUtility.singleLineHeight + 2,
+            drawElementCallback = DrawElement
+        };
+    }
+
+    void DrawElement(Rect rect, int i, bool isActive, bool isFocused)
+    {
+        if (i >= tiles.Count) return;
+
+        float x = rect.x;
+        float y = rect.y + 1;
+        float h = EditorGUIUtility.singleLineHeight;
+
+        EditorGUI.LabelField(new Rect(x, y, 30, h), i.ToString(), EditorStyles.miniLabel);
+        x += 32;
+
+        tiles[i].tile = EditorGUI.TextField(new Rect(x, y, 100, h), tiles[i].tile);
+        x += 104;
+
+        if (tiles[i].tile == "Obstacle")
+        {
+            tiles[i].obstacleId = DrawIdDropdown(new Rect(x, y, 120, h), tiles[i].obstacleId, GetObstacleIds());
+        }
+        else if (tiles[i].tile == "Item")
+        {
+            tiles[i].itemId = DrawIdDropdown(new Rect(x, y, 100, h), tiles[i].itemId, GetItemIds());
+            x += 104;
+            tiles[i].height = EditorGUI.FloatField(new Rect(x, y, 50, h), tiles[i].height);
+        }
+
+        if (GUI.Button(new Rect(rect.xMax - 25, y, 25, h), "X"))
+            tiles.RemoveAt(i);
+    }
+
+    string DrawIdDropdown(Rect rect, string current, string[] options)
+    {
+        if (options == null || options.Length == 0) return current;
+        int idx = Mathf.Max(0, System.Array.IndexOf(options, current));
+        idx = EditorGUI.Popup(rect, idx, options);
+        return options[idx];
+    }
+
+    string[] GetObstacleIds()
+    {
+        if (themeData == null) return new string[0];
+        return System.Array.ConvertAll(themeData.obstacles, o => o.id);
+    }
+
+    string[] GetItemIds()
+    {
+        if (themeData == null) return new string[0];
+        return System.Array.ConvertAll(themeData.items, i => i.id);
     }
 
     void OnGUI()
@@ -35,62 +100,8 @@ public class MapEditorWindow : EditorWindow
     void DrawTileList()
     {
         scrollPos = EditorGUILayout.BeginScrollView(scrollPos);
-
-        int moveFrom = -1, moveTo = -1;
-
-        for (int i = 0; i < tiles.Count; i++)
-        {
-            EditorGUILayout.BeginHorizontal();
-
-            // 순서 변경 버튼
-            GUI.enabled = i > 0;
-            if (GUILayout.Button("▲", GUILayout.Width(22))) { moveFrom = i; moveTo = i - 1; }
-            GUI.enabled = i < tiles.Count - 1;
-            if (GUILayout.Button("▼", GUILayout.Width(22))) { moveFrom = i; moveTo = i + 1; }
-            GUI.enabled = true;
-
-            tiles[i].tile = EditorGUILayout.TextField(tiles[i].tile, GUILayout.Width(100));
-
-            if (tiles[i].tile == "Obstacle")
-                tiles[i].obstacleId = DrawIdDropdown(tiles[i].obstacleId, GetObstacleIds(), 120);
-            else if (tiles[i].tile == "Item")
-            {
-                tiles[i].itemId = DrawIdDropdown(tiles[i].itemId, GetItemIds(), 120);
-                tiles[i].height = EditorGUILayout.FloatField(tiles[i].height, GUILayout.Width(50));
-            }
-            else
-                GUILayout.Space(175);
-
-            if (GUILayout.Button("X", GUILayout.Width(25)))
-                tiles.RemoveAt(i);
-
-            EditorGUILayout.EndHorizontal();
-        }
-
+        reorderableList.DoLayoutList();
         EditorGUILayout.EndScrollView();
-
-        if (moveFrom >= 0)
-            (tiles[moveFrom], tiles[moveTo]) = (tiles[moveTo], tiles[moveFrom]);
-    }
-
-    string DrawIdDropdown(string current, string[] options, int width)
-    {
-        if (options == null || options.Length == 0) return current;
-        int idx = Mathf.Max(0, System.Array.IndexOf(options, current));
-        idx = EditorGUILayout.Popup(idx, options, GUILayout.Width(width));
-        return options[idx];
-    }
-
-    string[] GetObstacleIds()
-    {
-        if (themeData == null) return new string[0];
-        return System.Array.ConvertAll(themeData.obstacles, o => o.id);
-    }
-
-    string[] GetItemIds()
-    {
-        if (themeData == null) return new string[0];
-        return System.Array.ConvertAll(themeData.items, i => i.id);
     }
 
     void DrawFooter()
@@ -98,9 +109,9 @@ public class MapEditorWindow : EditorWindow
         EditorGUILayout.Space();
         EditorGUILayout.BeginHorizontal();
 
-        if (GUILayout.Button("Empty 추가")) tiles.Add(new TileData { tile = "Empty" });
-        if (GUILayout.Button("Obstacle 추가")) tiles.Add(new TileData { tile = "Obstacle" });
-        if (GUILayout.Button("Item 추가")) tiles.Add(new TileData { tile = "Item" });
+        if (GUILayout.Button("Empty 추가")) { tiles.Add(new TileData { tile = "Empty" }); BuildReorderableList(); }
+        if (GUILayout.Button("Obstacle 추가")) { tiles.Add(new TileData { tile = "Obstacle" }); BuildReorderableList(); }
+        if (GUILayout.Button("Item 추가")) { tiles.Add(new TileData { tile = "Item" }); BuildReorderableList(); }
 
         EditorGUILayout.EndHorizontal();
         EditorGUILayout.Space();
@@ -130,6 +141,7 @@ public class MapEditorWindow : EditorWindow
         LevelData data = JsonUtility.FromJson<LevelData>(json);
 
         tiles = new List<TileData>(data.tiles);
+        BuildReorderableList();
 
         if (!string.IsNullOrEmpty(data.theme))
         {

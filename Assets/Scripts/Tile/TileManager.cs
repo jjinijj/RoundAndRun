@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +16,8 @@ public class TileManager : MonoBehaviour
 
     [Header("Player Reference")]
     [SerializeField] private Transform player;
+
+    public Action onTilePassed;
 
     private Dictionary<TileType, Queue<Tile>> tilePools = new();
     private Dictionary<string, Queue<GameObject>> obstaclePools = new();
@@ -77,9 +80,33 @@ public class TileManager : MonoBehaviour
 
     public void StartGame()
     {
+        ResetTiles();
         for (int i = 0; i < initialTileCount; i++)
             SpawnTile();
         isRunning = true;
+    }
+
+    void ResetTiles()
+    {
+        foreach (var tile in activeTiles)
+        {
+            GameObject child = tile.DetachChild();
+            if (child != null)
+            {
+                string id = child.name.Replace("(Clone)", "").Trim();
+                if (obstaclePools.ContainsKey(id))
+                    obstaclePools[id].Enqueue(child);
+                else if (itemPools.ContainsKey(id))
+                    itemPools[id].Enqueue(child);
+                else
+                    Destroy(child);
+            }
+            tile.gameObject.SetActive(false);
+            tilePools[tile.tileType].Enqueue(tile);
+        }
+
+        activeTiles.Clear();
+        sequenceIndex = 0;
     }
 
     TileData GetNextTileData()
@@ -167,6 +194,7 @@ public class TileManager : MonoBehaviour
         if (oldest.transform.position.z >= player.position.z - oldest.tileLength) return;
 
         activeTiles.RemoveAt(0);
+        onTilePassed?.Invoke();
 
         // 장애물/아이템 풀에 반납
         GameObject child = oldest.DetachChild();

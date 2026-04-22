@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: GameSettings
   m_EditorClassIdentifier: 
   tileSpeed: 5
+  maxLife: 5
+  scorePerSecond: 1
