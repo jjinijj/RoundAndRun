@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI finalScoreText;
     [SerializeField] Image lifeFill;
     [SerializeField] PlayerState playerState; 
+    [SerializeField] DamageEffect damageEffect;
 
     void Awake()
     {
@@ -25,6 +26,7 @@ public class UIManager : MonoBehaviour
     private void Init()
     {
         playerState.onChangeLife += ChangeLife;
+        playerState.onDecreaseLife += ShowDamageEffect;
 
         initUI.SetActive(true);
         ingameUI.SetActive(false);
@@ -35,6 +37,8 @@ public class UIManager : MonoBehaviour
         initUI.SetActive(false);
         ingameUI.SetActive(true);
         endUI.SetActive(false);
+
+        damageEffect.Reset();
     }
 
     public void ShowEndUI()
@@ -56,9 +60,15 @@ public class UIManager : MonoBehaviour
             lifeFill.fillAmount = (float)life / maxLife;
     }
 
+    private void ShowDamageEffect()
+    {
+        damageEffect.PlayEffect();
+    }
+
     void OnDestroy()
     {
         playerState.onChangeLife -= ChangeLife;
+        playerState.onDecreaseLife -= ShowDamageEffect;
     }
 
 
