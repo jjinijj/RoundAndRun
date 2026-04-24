@@ -13,6 +13,8 @@ public class PlayerState : ScriptableObject
 
     public Action onDead;
     public Action<int, int> onChangeLife;
+    public Action onDecreaseLife;
+    public Action onIncreaseLife;
     
     // PlayerState
     public void UpdateScore(float deltaTime)
@@ -33,6 +35,7 @@ public class PlayerState : ScriptableObject
     {
         life--;
         onChangeLife?.Invoke(life, gameSettings.maxLife);
+        onDecreaseLife?.Invoke();
         if (life <= 0)
         {
             isDead = true;
