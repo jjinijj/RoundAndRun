@@ -15,12 +15,14 @@ public class ItemData
     public string id;
     public string displayName;
     public GameObject prefab;
+    public AudioClip pickupClip;
 }
 
 [CreateAssetMenu(menuName = "Game/BGThemeData")]
 public class BGThemeData : ScriptableObject
 {
     public string themeName;
+    public AudioClip bgmClip;
     public GameObject[] bgTilePrefabs;
     public GameObject[] decorationPrefabs;
     public float decorationSpawnChance;

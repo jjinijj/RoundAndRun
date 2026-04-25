@@ -12,13 +12,15 @@ public class HitDetector : MonoBehaviour
             if(item != null)
             {
                 playerState.AddScore(item.score);
+                if(item.pickupClip != null)
+                    SoundManager.Instance.PlayItemPickup(item.pickupClip);
                 item.DisableItem();
             }
         }
         else if(other.CompareTag("Obstacle"))
         {
+            SoundManager.Instance.PlayHit();
             playerState.OnHitObstacle();
-
         }
     }
 }

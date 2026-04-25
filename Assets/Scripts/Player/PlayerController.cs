@@ -72,6 +72,8 @@ public class PlayerController : MonoBehaviour
         isJumping = true;
         groundY = transform.position.y;
         cameraController.SetJump();
+
+        SoundManager.Instance.PlayJump();
     }
 
     public void OnJumpEnd()
@@ -92,6 +94,8 @@ public class PlayerController : MonoBehaviour
         hitCollision.center = new Vector3(0, 0.3f, 0);
         animator.SetBool("IsSlide", true);
         cameraController.SetSlide();
+
+        SoundManager.Instance.PlaySlide();
     }
 
     public void OnSlideEnd()
