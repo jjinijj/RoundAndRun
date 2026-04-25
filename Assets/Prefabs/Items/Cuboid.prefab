@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 10
+  pickupClip: {fileID: 8300000, guid: 9815c869e2037498cae8402cefa3ca26, type: 3}
   outline: {fileID: 7333246418594460352}
 --- !u!114 &7333246418594460352
 MonoBehaviour:

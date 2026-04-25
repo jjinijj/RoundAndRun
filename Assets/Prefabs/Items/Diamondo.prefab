@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 50
+  pickupClip: {fileID: 8300000, guid: f71d191cfa8de46edbc80e1bf75a6e87, type: 3}
   outline: {fileID: 8876378949392853659}
 --- !u!136 &-650249502231253142
 CapsuleCollider:

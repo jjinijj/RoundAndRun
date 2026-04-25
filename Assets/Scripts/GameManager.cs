@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private PlayerState playerState;
     [SerializeField] private GameSettings gameSettings;
+    [SerializeField] private BGThemeData currentTheme;
     [SerializeField] private PlayerController playerController;
     [SerializeField] private TileManager tileManager;
     [SerializeField] private BGTileManager bgTileManager;
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
     {
         playerState.Reset();
         playerState.onDead += GameOver;
+        
     }
 
     void Update()
@@ -44,6 +46,9 @@ public class GameManager : MonoBehaviour
         cameraController.StartRun();
 
         uimanager.ShowIngameUI();
+
+        if(currentTheme != null && currentTheme.bgmClip != null)
+            SoundManager.Instance.PlayBGM(currentTheme.bgmClip, true);
 
         isPlaying = true;
     }
