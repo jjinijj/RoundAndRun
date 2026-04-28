@@ -42,3 +42,7 @@ MonoBehaviour:
     displayName: 
     prefab: {fileID: 3547536226201909616, guid: 3a800ed0d14be4131a627bb5da64fcd5, type: 3}
     pickupClip: {fileID: 8300000, guid: f71d191cfa8de46edbc80e1bf75a6e87, type: 3}
+  - id: item__003
+    displayName: 
+    prefab: {fileID: 1642664325573601986, guid: b639495668f944b26b6359796f734acb, type: 3}
+    pickupClip: {fileID: 8300000, guid: 4f45b9123a5c445e28a55bbcc74708e9, type: 3}

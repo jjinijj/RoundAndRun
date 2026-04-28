@@ -2652,6 +2652,7 @@ MonoBehaviour:
   bobFrequency: 10
   bobAmplitude: 0.01
   deadEyePoint: {fileID: 1360901180}
+  playerState: {fileID: 11400000, guid: 5ed1d0573c05f45daaf7066437d80864, type: 2}
 --- !u!1 &891757194
 GameObject:
   m_ObjectHideFlags: 0

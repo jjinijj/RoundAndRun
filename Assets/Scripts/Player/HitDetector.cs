@@ -11,7 +11,7 @@ public class HitDetector : MonoBehaviour
             Item item = other.GetComponent<Item>();
             if(item != null)
             {
-                playerState.AddScore(item.score);
+                item.OnPickUp(playerState);
                 if(item.pickupClip != null)
                     SoundManager.Instance.PlayItemPickup(item.pickupClip);
                 item.DisableItem();

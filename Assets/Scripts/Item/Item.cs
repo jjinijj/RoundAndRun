@@ -4,14 +4,15 @@ public enum ItemType { onGround, Floating }
 
 public class Item : MonoBehaviour
 {
-    public int score = 10;
-    public AudioClip pickupClip; // 추가
+    public AudioClip pickupClip;
     [SerializeField] private Outline outline;
 
     void Awake()
     {
         outline = GetComponent<Outline>();
     }
+
+    public virtual void OnPickUp(PlayerState playerState) { }
 
     public void ResetItem()
     {
