@@ -46,11 +46,27 @@ public class GameManager : MonoBehaviour
         cameraController.StartRun();
 
         uimanager.ShowIngameUI();
+        Time.timeScale = 1f;
 
         if(currentTheme != null && currentTheme.bgmClip != null)
             SoundManager.Instance.PlayBGM(currentTheme.bgmClip, true);
 
         isPlaying = true;
+    }
+
+    public void Pause()
+    {
+        if (!isPlaying) return;
+        Time.timeScale = 0f;
+        SoundManager.Instance.PauseBGM();
+        uimanager.ShowPauseUI();
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+        SoundManager.Instance.ResumeBGM();
+        uimanager.HidePauseUI();
     }
 
     void GameOver()

@@ -92,13 +92,13 @@ PrefabInstance:
       addedObject: {fileID: 8954285732813830469}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5b95901ea9b9ede4da89cf8cad216e46, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -4345959614011986727}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5b95901ea9b9ede4da89cf8cad216e46, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7333246418594460352}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5b95901ea9b9ede4da89cf8cad216e46, type: 3}
       insertIndex: -1
       addedObject: {fileID: -8524457581838544471}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5b95901ea9b9ede4da89cf8cad216e46, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3631655091911494149}
   m_SourcePrefab: {fileID: 100100000, guid: 5b95901ea9b9ede4da89cf8cad216e46, type: 3}
 --- !u!1 &1115092350195915808 stripped
 GameObject:
@@ -155,21 +155,6 @@ CapsuleCollider:
   m_Height: 2.4544847
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-4345959614011986727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115092350195915808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dcd4c63924a14eed877030729b95355, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 10
-  pickupClip: {fileID: 8300000, guid: 9815c869e2037498cae8402cefa3ca26, type: 3}
-  outline: {fileID: 7333246418594460352}
 --- !u!114 &7333246418594460352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,3 +196,18 @@ CapsuleCollider:
   m_Height: 2.4544847
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3631655091911494149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115092350195915808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84fb6e9e0223c4b3fbbc30db01171f78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupClip: {fileID: 8300000, guid: 9815c869e2037498cae8402cefa3ca26, type: 3}
+  outline: {fileID: 7333246418594460352}
+  score: 10

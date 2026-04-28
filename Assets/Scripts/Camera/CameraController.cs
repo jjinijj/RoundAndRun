@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float bobFrequency = 5f;
     [SerializeField] private float bobAmplitude = 0.05f;
     [SerializeField] private Transform deadEyePoint;
-
+    [SerializeField] private PlayerState playerState;
 
     private static readonly Vector3 runRotation   = new(  0f, 0f, 0f);
     private static readonly Vector3 jumpRotation  = new( 16f, 0f, 0f);
@@ -22,6 +22,11 @@ public class CameraController : MonoBehaviour
     private bool isBobbing;
     private Vector3 initPosition;
     private Quaternion initRotation;
+
+    void OnEnable() => playerState.onDecreaseLife += OnChangeLife;
+    void OnDisable() => playerState.onDecreaseLife -= OnChangeLife;
+
+    void OnChangeLife() => PlayShake();
 
     void Start()
     {
@@ -108,4 +113,24 @@ public class CameraController : MonoBehaviour
             yield return null;
         }
     }
+
+    public IEnumerator ShakeCoroutine(float duration = 0.3f, float magnitude = 0.1f)
+    {
+        Vector3 originalPos = transform.localPosition;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            float x = Random.Range(-1f, 1f) * magnitude;
+            float y = Random.Range(-1f, 1f) * magnitude;
+
+            transform.localPosition = new Vector3(originalPos.x + x, originalPos.y + y, originalPos.z);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.localPosition = originalPos;
+    }
+
+    public void PlayShake() => StartCoroutine(ShakeCoroutine());
 }

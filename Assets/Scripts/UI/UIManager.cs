@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject initUI;
     [SerializeField] GameObject ingameUI;
     [SerializeField] GameObject endUI;
+    [SerializeField] GameObject pauseUI;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI finalScoreText;
     [SerializeField] Image lifeFill;
@@ -31,14 +32,26 @@ public class UIManager : MonoBehaviour
         initUI.SetActive(true);
         ingameUI.SetActive(false);
         endUI.SetActive(false);
+        pauseUI.SetActive(false);
     }
     public void ShowIngameUI()
     {
         initUI.SetActive(false);
         ingameUI.SetActive(true);
         endUI.SetActive(false);
+        pauseUI.SetActive(false);
 
         damageEffect.Reset();
+    }
+
+    public void ShowPauseUI()
+    {
+        pauseUI.SetActive(true);
+    }
+
+    public void HidePauseUI()
+    {
+        pauseUI.SetActive(false);
     }
 
     public void ShowEndUI()

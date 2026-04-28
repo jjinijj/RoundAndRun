@@ -31,6 +31,14 @@ public class PlayerState : ScriptableObject
         score += amount;
     }
 
+    public void Heal(int amount)
+    {
+        if (isDead) return;
+        life = Mathf.Min(life + amount, gameSettings.maxLife);
+        onChangeLife?.Invoke(life, gameSettings.maxLife);
+        onIncreaseLife?.Invoke();
+    }
+
     public void OnHitObstacle()
     {
         life--;
