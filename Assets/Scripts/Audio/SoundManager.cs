@@ -31,10 +31,13 @@ public class SoundManager : MonoBehaviour
 
     public void PlayBGM(AudioClip clip, bool loop = true)
     {
+        bgmSource.Stop();
         bgmSource.clip = clip;
         bgmSource.loop = loop;
         bgmSource.Play();
     }
 
     public void StopBGM() => bgmSource.Stop();
+    public void PauseBGM() => bgmSource.Pause();
+    public void ResumeBGM() => bgmSource.UnPause();
 }
