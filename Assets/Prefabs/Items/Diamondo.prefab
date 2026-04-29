@@ -93,6 +93,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8b76e94f4294db842928c1d103f1afce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4443633682087335159}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8b76e94f4294db842928c1d103f1afce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8684828114516638342}
   m_SourcePrefab: {fileID: 100100000, guid: 8b76e94f4294db842928c1d103f1afce, type: 3}
 --- !u!1 &3547536226201909616 stripped
 GameObject:
@@ -153,5 +156,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupClip: {fileID: 8300000, guid: f71d191cfa8de46edbc80e1bf75a6e87, type: 3}
-  outline: {fileID: 8876378949392853659}
   score: 50
+--- !u!114 &8684828114516638342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3547536226201909616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902f4e319111d44fa96985d0e008b2b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  outline: {fileID: 8876378949392853659}

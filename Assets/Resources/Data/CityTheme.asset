@@ -20,7 +20,7 @@ MonoBehaviour:
   - {fileID: 6248552797198535928, guid: 793f632a7d508432da2b57043f92a335, type: 3}
   - {fileID: 8018598508486374101, guid: 1e6c312c8100743ad9068eeeb1ea361a, type: 3}
   decorationSpawnChance: 0.3
-  obstacles:
+  objects:
   - id: obstacle__001
     displayName: 
     prefab: {fileID: 1929430761899908252, guid: 138ce6d9edf5f42d4b3ffae3e8719af9, type: 3}
@@ -33,16 +33,9 @@ MonoBehaviour:
   - id: obstacle__004
     displayName: 
     prefab: {fileID: 5483274458029530192, guid: f2a0b1edd4ad54a27aa78e838f6ce8c8, type: 3}
-  items:
-  - id: item__001
+  - id: guide_jump
     displayName: 
-    prefab: {fileID: 1115092350195915808, guid: c71c445a6afd6425797bb67fed8cccbb, type: 3}
-    pickupClip: {fileID: 8300000, guid: 9815c869e2037498cae8402cefa3ca26, type: 3}
-  - id: item__002
+    prefab: {fileID: 2795223936319845311, guid: d7e0d44170ba44b79a9320dc78389a1e, type: 3}
+  - id: guide_slide
     displayName: 
-    prefab: {fileID: 3547536226201909616, guid: 3a800ed0d14be4131a627bb5da64fcd5, type: 3}
-    pickupClip: {fileID: 8300000, guid: f71d191cfa8de46edbc80e1bf75a6e87, type: 3}
-  - id: item__003
-    displayName: 
-    prefab: {fileID: 1642664325573601986, guid: b639495668f944b26b6359796f734acb, type: 3}
-    pickupClip: {fileID: 8300000, guid: 4f45b9123a5c445e28a55bbcc74708e9, type: 3}
+    prefab: {fileID: 2424691907005677002, guid: 75c5ae6e0ae6e4448b661c5275e84a08, type: 3}

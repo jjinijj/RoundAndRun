@@ -4,10 +4,10 @@ public class WarningDetector : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        Outline outline = other.GetComponent<Outline>();
-        if (outline)
+        TileObject tileObject = other.GetComponent<TileObject>();
+        if (tileObject != null)
         {
-            outline.enabled = true;
+            tileObject.ShowOutline();
         }
     }
 }

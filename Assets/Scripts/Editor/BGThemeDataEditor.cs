@@ -13,11 +13,11 @@ public class BGThemeDataEditor : Editor
 
         if (GUILayout.Button("ID 자동 생성"))
         {
-            for (int i = 0; i < data.obstacles.Length; i++)
-                data.obstacles[i].id = $"obstacle_{data.themeName.ToLower()}_{(i + 1):D3}";
-
-            for (int i = 0; i < data.items.Length; i++)
-                data.items[i].id = $"item_{data.themeName.ToLower()}_{(i + 1):D3}";
+            if (data.objects != null)
+            {
+                for (int i = 0; i < data.objects.Length; i++)
+                    data.objects[i].id = $"object_{data.themeName.ToLower()}_{i + 1:D3}";
+            }
 
             EditorUtility.SetDirty(data);
             AssetDatabase.SaveAssets();

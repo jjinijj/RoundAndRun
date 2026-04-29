@@ -9,9 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4617396783528893616}
-  m_Layer: 0
+  - component: {fileID: 3390738522116115513}
+  - component: {fileID: 1481585782436938632}
+  - component: {fileID: 2998266746955177091}
+  m_Layer: 7
   m_Name: Road_Work_Sign_Slide
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,6 +35,53 @@ Transform:
   - {fileID: 1804098098417105209}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3390738522116115513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5483274458029530192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65a1b12f650fc4102bfd4c236d98add7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1481585782436938632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5483274458029530192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902f4e319111d44fa96985d0e008b2b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  outline: {fileID: 2706931434110105238}
+--- !u!65 &2998266746955177091
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5483274458029530192}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7053943, y: 0.87981784, z: 0.22}
+  m_Center: {x: 0, y: 2.0921435, z: 0}
 --- !u!1001 &654196052184726166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -94,9 +144,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1969914521657366805, guid: 068c53bb3cbf50444a3c727dabf5dbbc, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6837914231067524111}
-    - targetCorrespondingSourceObject: {fileID: 1969914521657366805, guid: 068c53bb3cbf50444a3c727dabf5dbbc, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7215173323972197607}
     - targetCorrespondingSourceObject: {fileID: 1969914521657366805, guid: 068c53bb3cbf50444a3c727dabf5dbbc, type: 3}
       insertIndex: -1
@@ -107,18 +154,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1969914521657366805, guid: 068c53bb3cbf50444a3c727dabf5dbbc, type: 3}
   m_PrefabInstance: {fileID: 654196052184726166}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6837914231067524111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1315791087795413891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65a1b12f650fc4102bfd4c236d98add7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &7215173323972197607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -136,7 +171,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1.7053943, y: 0.59, z: 0.22}
   m_Center: {x: 0, y: 0.73, z: 0}

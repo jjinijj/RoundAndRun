@@ -9,9 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 60882922143887733}
-  m_Layer: 0
+  - component: {fileID: 631106771231630856}
+  - component: {fileID: 8846743937668482852}
+  - component: {fileID: 8618407556245276307}
+  m_Layer: 7
   m_Name: Road_Work_Sign_Jump
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,6 +35,53 @@ Transform:
   - {fileID: 7650352869511174167}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &631106771231630856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994533738323041902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65a1b12f650fc4102bfd4c236d98add7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8846743937668482852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994533738323041902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902f4e319111d44fa96985d0e008b2b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  outline: {fileID: 255851491361676044}
+--- !u!65 &8618407556245276307
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994533738323041902}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1958771, y: 0.7572403, z: 0.2945963}
+  m_Center: {x: 0, y: 1.3787837, z: -0.00078731775}
 --- !u!1001 &8861721544432764580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40,6 +90,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 60882922143887733}
     m_Modifications:
+    - target: {fileID: 443359083747216979, guid: 23b3ee2b372b87943a6cbce286749574, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 443359083747216979, guid: 23b3ee2b372b87943a6cbce286749574, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -104,7 +158,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_Work_Sign_1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5823361478817653065, guid: 23b3ee2b372b87943a6cbce286749574, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
