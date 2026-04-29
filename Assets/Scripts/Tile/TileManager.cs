@@ -12,6 +12,7 @@ public class TileManager : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private GameSettings gameSettings;
     [SerializeField] private BGThemeData themeData;
+    [SerializeField] private ItemDatabase itemDatabase;
     [SerializeField] private int initialTileCount = 5;
 
     [Header("Player Reference")]
@@ -20,7 +21,7 @@ public class TileManager : MonoBehaviour
     public Action onTilePassed;
 
     private Dictionary<TileType, Queue<Tile>> tilePools = new();
-    private Dictionary<string, Queue<GameObject>> obstaclePools = new();
+    private Dictionary<string, Queue<GameObject>> objectPools = new();
     private Dictionary<string, Queue<GameObject>> itemPools = new();
     private List<Tile> activeTiles = new();
     private int sequenceIndex = 0;
@@ -35,7 +36,7 @@ public class TileManager : MonoBehaviour
         InitTilePool(TileType.Obstacle, obstacleTilePrefab);
         InitTilePool(TileType.Item, itemTilePrefab);
 
-        InitObstaclePools();
+        InitObjectPools();
         InitItemPools();
     }
 
@@ -50,23 +51,24 @@ public class TileManager : MonoBehaviour
         }
     }
 
-    void InitObstaclePools()
+    void InitObjectPools()
     {
-        foreach (var data in themeData.obstacles)
+        foreach (var data in themeData.objects)
         {
-            obstaclePools[data.id] = new Queue<GameObject>();
+            objectPools[data.id] = new Queue<GameObject>();
             for (int i = 0; i < 3; i++)
             {
                 var go = Instantiate(data.prefab);
                 go.SetActive(false);
-                obstaclePools[data.id].Enqueue(go);
+                objectPools[data.id].Enqueue(go);
             }
         }
     }
 
     void InitItemPools()
     {
-        foreach (var data in themeData.items)
+        if (itemDatabase == null) return;
+        foreach (var data in itemDatabase.items)
         {
             itemPools[data.id] = new Queue<GameObject>();
             for (int i = 0; i < 3; i++)
@@ -90,23 +92,29 @@ public class TileManager : MonoBehaviour
     {
         foreach (var tile in activeTiles)
         {
-            GameObject child = tile.DetachChild();
-            if (child != null)
-            {
-                string id = child.name.Replace("(Clone)", "").Trim();
-                if (obstaclePools.ContainsKey(id))
-                    obstaclePools[id].Enqueue(child);
-                else if (itemPools.ContainsKey(id))
-                    itemPools[id].Enqueue(child);
-                else
-                    Destroy(child);
-            }
+            ReturnChildrenToPool(tile);
             tile.gameObject.SetActive(false);
             tilePools[tile.tileType].Enqueue(tile);
         }
 
         activeTiles.Clear();
         sequenceIndex = 0;
+    }
+
+    void ReturnChildrenToPool(Tile tile)
+    {
+        foreach (var child in tile.DetachAll())
+        {
+            if (!child.TryGetComponent(out TileObject tileObj)) { Destroy(child); continue; }
+
+            string id = tileObj.Id;
+            if (tileObj.Type == TileObjectType.Item && itemPools.ContainsKey(id))
+                itemPools[id].Enqueue(child);
+            else if (objectPools.ContainsKey(id))
+                objectPools[id].Enqueue(child);
+            else
+                Destroy(child);
+        }
     }
 
     TileData GetNextTileData()
@@ -129,19 +137,29 @@ public class TileManager : MonoBehaviour
         tile.transform.position = new Vector3(0, -1f, spawnZ);
         tile.gameObject.SetActive(true);
 
-        if (type == TileType.Obstacle && !string.IsNullOrEmpty(tileData.obstacleId))
+        if (tileData.objects != null)
         {
-            var obj = GetFromPool(obstaclePools, tileData.obstacleId, themeData.GetObstacle(tileData.obstacleId)?.prefab);
-            if (obj != null) tile.AttachChild(obj, Vector3.zero);
-        }
-        else if (type == TileType.Item && !string.IsNullOrEmpty(tileData.itemId))
-        {
-            var obj = GetFromPool(itemPools, tileData.itemId, themeData.GetItem(tileData.itemId)?.prefab);
-            if (obj != null) tile.AttachChild(obj, new Vector3(0, tileData.height, 0));
+            foreach (var objData in tileData.objects)
+            {
+                var obj = GetObjectFromPools(objData.id);
+                if (obj == null) continue;
+                if (obj.TryGetComponent(out TileObject tileObj))
+                    tileObj.Id = objData.id;
+                tile.AttachChild(obj, new Vector3(0, objData.height, 0));
+            }
         }
 
         tile.ResetTile();
         activeTiles.Add(tile);
+    }
+
+    GameObject GetObjectFromPools(string id)
+    {
+        if (objectPools.ContainsKey(id))
+            return GetFromPool(objectPools, id, themeData.GetObject(id)?.prefab);
+        if (itemPools.ContainsKey(id))
+            return GetFromPool(itemPools, id, itemDatabase.GetItem(id)?.prefab);
+        return null;
     }
 
     GameObject GetFromPool(Dictionary<string, Queue<GameObject>> pools, string id, GameObject prefab)
@@ -196,18 +214,7 @@ public class TileManager : MonoBehaviour
         activeTiles.RemoveAt(0);
         onTilePassed?.Invoke();
 
-        // 장애물/아이템 풀에 반납
-        GameObject child = oldest.DetachChild();
-        if (child != null)
-        {
-            string id = child.name.Replace("(Clone)", "").Trim();
-            if (obstaclePools.ContainsKey(id))
-                obstaclePools[id].Enqueue(child);
-            else if (itemPools.ContainsKey(id))
-                itemPools[id].Enqueue(child);
-            else
-                Destroy(child); // 매핑 못 찾으면 제거
-        }
+        ReturnChildrenToPool(oldest);
 
         oldest.gameObject.SetActive(false);
         tilePools[oldest.tileType].Enqueue(oldest);

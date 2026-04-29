@@ -3,1383 +3,1364 @@
     "tiles": [
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__001",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__001",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__001",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__001",
+                    "height": 0.0,
+                    "slot": 1
+                },
+                {
+                    "id": "guide_jump",
+                    "height": 1.399999976158142,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__001",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__001",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__003",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__003",
+                    "height": 0.0,
+                    "slot": 1
+                },
+                {
+                    "id": "guide_jump",
+                    "height": 1.399999976158142,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__001",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__001",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__004",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__004",
+                    "height": 0.0,
+                    "slot": 1
+                },
+                {
+                    "id": "guide_slide",
+                    "height": 1.7999999523162842,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__001",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__001",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__001",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__001",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__001",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__001",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__003",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__003",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__001",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__001",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__004",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__004",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__001",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__001",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__001",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__001",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__001",
-            "height": 1.100000023841858
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__001",
+                    "height": 1.100000023841858,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__001",
-            "height": 1.2000000476837159
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__001",
+                    "height": 1.2000000476837159,
+                    "slot": 1
+                }
+            ]
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__001",
-            "height": 1.5
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__001",
+                    "height": 1.5,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__001",
-            "height": 1.399999976158142
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__001",
+                    "height": 1.399999976158142,
+                    "slot": 1
+                }
+            ]
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__001",
-            "height": 1.2000000476837159
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__001",
+                    "height": 1.2000000476837159,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__001",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__001",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__001",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__001",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__003",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__003",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__004",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__004",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__002",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__002",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__002",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__002",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__002",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__002",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__004",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__004",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__003",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__003",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__001",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__001",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__002",
-            "height": 1.5
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__002",
+                    "height": 1.5,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__002",
-            "height": 1.5
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__002",
+                    "height": 1.5,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__001",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__001",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__003",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__003",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__004",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__004",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__004",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__004",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__003",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__003",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__001",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__001",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__001",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__001",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__001",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__001",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__004",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__004",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__004",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__004",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__003",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__003",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__003",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__003",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__002",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__002",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__001",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__001",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__001",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__001",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__003",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__003",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__003",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__003",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__004",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__004",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__004",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__004",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__003",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__003",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__001",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__001",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__003",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__003",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__004",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__004",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__004",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__004",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__004",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__004",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__004",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__004",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__004",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__004",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__004",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__004",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__004",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__004",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Obstacle",
-            "obstacleId": "obstacle__004",
-            "itemId": "",
-            "height": 0.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "obstacle__004",
+                    "height": 0.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__001",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__001",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__001",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__001",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__001",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__001",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__002",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__002",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__002",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__002",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__002",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__002",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__001",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__001",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
             "tile": "Empty",
-            "obstacleId": "",
-            "itemId": "",
-            "height": 0.0
+            "objects": []
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__002",
-            "height": 1.5
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__002",
+                    "height": 1.5,
+                    "slot": 1
+                }
+            ]
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__002",
-            "height": 1.5
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__002",
+                    "height": 1.5,
+                    "slot": 1
+                }
+            ]
         },
         {
-            "tile": "Item",
-            "obstacleId": "",
-            "itemId": "item__003",
-            "height": 1.0
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__003",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         }
     ]
 }

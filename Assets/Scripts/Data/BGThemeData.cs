@@ -9,15 +9,6 @@ public class ObstacleData
     public GameObject prefab;
 }
 
-[Serializable]
-public class ItemData
-{
-    public string id;
-    public string displayName;
-    public GameObject prefab;
-    public AudioClip pickupClip;
-}
-
 [CreateAssetMenu(menuName = "Game/BGThemeData")]
 public class BGThemeData : ScriptableObject
 {
@@ -26,10 +17,8 @@ public class BGThemeData : ScriptableObject
     public GameObject[] bgTilePrefabs;
     public GameObject[] decorationPrefabs;
     public float decorationSpawnChance;
-    public ObstacleData[] obstacles;
-    public ItemData[] items;
+    public ObjectData[] objects;
 
-    public ObstacleData GetObstacle(string id) => System.Array.Find(obstacles, o => o.id == id);
+    public ObjectData GetObject(string id) => System.Array.Find(objects, o => o.id == id);
 
-    public ItemData GetItem(string id) => System.Array.Find(items, i => i.id == id);
 }

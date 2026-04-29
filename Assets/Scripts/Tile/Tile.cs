@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum TileType { Empty, Obstacle, Item }
@@ -7,31 +8,29 @@ public class Tile : MonoBehaviour
     public TileType tileType;
     public float tileLength = 10f;
 
-    public GameObject dynamicChild { get; private set; }
+    private readonly List<GameObject> dynamicChildren = new();
 
     public void AttachChild(GameObject obj, Vector3 localPos)
     {
-        dynamicChild = obj;
-        dynamicChild.transform.SetParent(transform);
-        dynamicChild.transform.localPosition = localPos;
-        dynamicChild.SetActive(true);
-
-        var outline = obj.GetComponentInChildren<Outline>();
-        if (outline != null) outline.enabled = false;
+        obj.transform.SetParent(transform);
+        obj.transform.localPosition = localPos;
+        obj.SetActive(true);
+        if (obj.TryGetComponent(out TileObject tileObject)) tileObject.Reset();
+        dynamicChildren.Add(obj);
     }
 
-    public GameObject DetachChild()
+    public List<GameObject> DetachAll()
     {
-        if (dynamicChild == null) return null;
-        dynamicChild.transform.SetParent(null);
-        dynamicChild.SetActive(false);
-        var obj = dynamicChild;
-        dynamicChild = null;
-        return obj;
+        var detached = new List<GameObject>(dynamicChildren);
+        foreach (var obj in dynamicChildren)
+        {
+            obj.GetComponent<TileObject>()?.Reset();
+            obj.transform.SetParent(null);
+            obj.SetActive(false);
+        }
+        dynamicChildren.Clear();
+        return detached;
     }
 
-    public void ResetTile()
-    {
-        // Destroy 안 함, DetachChild는 TileManager에서 호출
-    }
+    public void ResetTile() { }
 }
