@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class TileManager : MonoBehaviour
 {
-    [Header("Tile Prefabs")]
-    [SerializeField] private Tile emptyTilePrefab;
-    [SerializeField] private Tile obstacleTilePrefab;
-    [SerializeField] private Tile itemTilePrefab;
-
     [Header("Settings")]
     [SerializeField] private GameSettings gameSettings;
     [SerializeField] private BGThemeData themeData;
@@ -19,35 +14,32 @@ public class TileManager : MonoBehaviour
     [SerializeField] private Transform player;
 
     public Action onTilePassed;
+    public Action onLevelComplete;
 
-    private Dictionary<TileType, Queue<Tile>> tilePools = new();
+    private Queue<Tile> tilePool = new();
     private Dictionary<string, Queue<GameObject>> objectPools = new();
     private Dictionary<string, Queue<GameObject>> itemPools = new();
     private List<Tile> activeTiles = new();
+    private HashSet<Tile> staleTiles = new();
     private int sequenceIndex = 0;
     private bool isRunning = false;
     private LevelData levelData;
 
     void Start()
     {
-        levelData = GetComponent<LevelLoader>().Load();
-
-        InitTilePool(TileType.Empty, emptyTilePrefab);
-        InitTilePool(TileType.Obstacle, obstacleTilePrefab);
-        InitTilePool(TileType.Item, itemTilePrefab);
-
+        InitTilePool();
         InitObjectPools();
         InitItemPools();
     }
 
-    void InitTilePool(TileType type, Tile prefab)
+    void InitTilePool()
     {
-        tilePools[type] = new Queue<Tile>();
+        tilePool.Clear();
         for (int i = 0; i < 3; i++)
         {
-            Tile t = Instantiate(prefab);
+            Tile t = Instantiate(themeData.tilePrefab);
             t.gameObject.SetActive(false);
-            tilePools[type].Enqueue(t);
+            tilePool.Enqueue(t);
         }
     }
 
@@ -80,8 +72,36 @@ public class TileManager : MonoBehaviour
         }
     }
 
+    public void SetTheme(BGThemeData data)
+    {
+        foreach (var tile in activeTiles)
+            staleTiles.Add(tile);
+
+        foreach (var t in tilePool) Destroy(t.gameObject);
+        tilePool.Clear();
+
+        foreach (var queue in objectPools.Values)
+            while (queue.Count > 0) Destroy(queue.Dequeue());
+        objectPools.Clear();
+
+        themeData = data;
+        InitTilePool();
+        InitObjectPools();
+    }
+
+    public void SetLevel(LevelData data)
+    {
+        levelData = data;
+        sequenceIndex = 0;
+    }
+
     public void StartGame()
     {
+        if (levelData == null)
+        {
+            Debug.LogError("TileManager: levelData가 없습니다. SetLevel()을 먼저 호출하세요.");
+            return;
+        }
         ResetTiles();
         for (int i = 0; i < initialTileCount; i++)
             SpawnTile();
@@ -94,7 +114,7 @@ public class TileManager : MonoBehaviour
         {
             ReturnChildrenToPool(tile);
             tile.gameObject.SetActive(false);
-            tilePools[tile.tileType].Enqueue(tile);
+            tilePool.Enqueue(tile);
         }
 
         activeTiles.Clear();
@@ -120,15 +140,17 @@ public class TileManager : MonoBehaviour
     TileData GetNextTileData()
     {
         if (sequenceIndex >= levelData.tiles.Length)
+        {
             sequenceIndex = 0;
+            onLevelComplete?.Invoke();
+        }
         return levelData.tiles[sequenceIndex++];
     }
 
     void SpawnTile()
     {
         TileData tileData = GetNextTileData();
-        TileType type = ParseTileType(tileData.tile);
-        Tile tile = GetFromTilePool(type);
+        Tile tile = GetFromTilePool();
 
         float spawnZ = activeTiles.Count > 0
             ? activeTiles[activeTiles.Count - 1].transform.position.z + activeTiles[activeTiles.Count - 1].tileLength
@@ -153,6 +175,12 @@ public class TileManager : MonoBehaviour
         activeTiles.Add(tile);
     }
 
+    Tile GetFromTilePool()
+    {
+        if (tilePool.Count > 0) return tilePool.Dequeue();
+        return Instantiate(themeData.tilePrefab);
+    }
+
     GameObject GetObjectFromPools(string id)
     {
         if (objectPools.ContainsKey(id))
@@ -169,27 +197,6 @@ public class TileManager : MonoBehaviour
         if (prefab == null) return null;
         return Instantiate(prefab);
     }
-
-    Tile GetFromTilePool(TileType type)
-    {
-        if (tilePools[type].Count > 0)
-            return tilePools[type].Dequeue();
-        return Instantiate(GetTilePrefab(type));
-    }
-
-    Tile GetTilePrefab(TileType type) => type switch
-    {
-        TileType.Obstacle => obstacleTilePrefab,
-        TileType.Item => itemTilePrefab,
-        _ => emptyTilePrefab
-    };
-
-    TileType ParseTileType(string tile) => tile switch
-    {
-        "Obstacle" => TileType.Obstacle,
-        "Item" => TileType.Item,
-        _ => TileType.Empty
-    };
 
     void Update()
     {
@@ -214,10 +221,17 @@ public class TileManager : MonoBehaviour
         activeTiles.RemoveAt(0);
         onTilePassed?.Invoke();
 
-        ReturnChildrenToPool(oldest);
-
-        oldest.gameObject.SetActive(false);
-        tilePools[oldest.tileType].Enqueue(oldest);
+        if (staleTiles.Remove(oldest))
+        {
+            foreach (var child in oldest.DetachAll()) Destroy(child);
+            Destroy(oldest.gameObject);
+        }
+        else
+        {
+            ReturnChildrenToPool(oldest);
+            oldest.gameObject.SetActive(false);
+            tilePool.Enqueue(oldest);
+        }
         SpawnTile();
     }
 

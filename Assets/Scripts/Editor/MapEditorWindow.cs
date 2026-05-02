@@ -188,9 +188,16 @@ public class MapEditorWindow : EditorWindow
 
         if (!string.IsNullOrEmpty(data.theme))
         {
-            string[] guids = AssetDatabase.FindAssets($"t:BGThemeData {data.theme}");
-            if (guids.Length > 0)
-                themeData = AssetDatabase.LoadAssetAtPath<BGThemeData>(AssetDatabase.GUIDToAssetPath(guids[0]));
+            string[] guids = AssetDatabase.FindAssets("t:BGThemeData");
+            foreach (var guid in guids)
+            {
+                var loaded = AssetDatabase.LoadAssetAtPath<BGThemeData>(AssetDatabase.GUIDToAssetPath(guid));
+                if (loaded != null && loaded.name == data.theme)
+                {
+                    themeData = loaded;
+                    break;
+                }
+            }
         }
 
         Debug.Log($"불러오기 완료: {path}");
@@ -225,7 +232,7 @@ public class MapEditorWindow : EditorWindow
 
         LevelData data = new LevelData
         {
-            theme = themeData.themeName,
+            theme = themeData.name,
             tiles = tiles.ToArray()
         };
 

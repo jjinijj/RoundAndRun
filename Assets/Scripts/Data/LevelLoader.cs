@@ -3,11 +3,17 @@ using System;
 
 public class LevelLoader : MonoBehaviour
 {
-    [SerializeField] private TextAsset levelJson;
+    private const string LevelPath = "Levels/";
 
-    public LevelData Load()
+    public LevelData LoadByName(string levelJsonName)
     {
-        return JsonUtility.FromJson<LevelData>(levelJson.text);
+        TextAsset asset = Resources.Load<TextAsset>(LevelPath + levelJsonName);
+        if (asset == null)
+        {
+            Debug.LogError($"LevelLoader: '{levelJsonName}' 파일을 찾을 수 없습니다. (Resources/Levels/ 확인)");
+            return null;
+        }
+        return JsonUtility.FromJson<LevelData>(asset.text);
     }
 
     public TileType ParseTileType(string tile)

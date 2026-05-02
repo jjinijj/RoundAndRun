@@ -1,0 +1,211 @@
+{
+    "theme": "ForestTheme",
+    "tiles": [
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "jump_fence",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "slide_sign",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "jump_stump",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "slide_broken",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": []
+        },
+        {
+            "tile": "Empty",
+            "objects": [
+                {
+                    "id": "item__003",
+                    "height": 1.2999999523162842,
+                    "slot": 1
+                }
+            ]
+        }
+    ]
+}

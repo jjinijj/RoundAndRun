@@ -28,6 +28,11 @@
                     "id": "item__001",
                     "height": 1.0,
                     "slot": 1
+                },
+                {
+                    "id": "guide_score",
+                    "height": 1.5,
+                    "slot": 1
                 }
             ]
         },
@@ -90,8 +95,13 @@
             "tile": "Empty",
             "objects": [
                 {
-                    "id": "item__001",
+                    "id": "item__002",
                     "height": 1.0,
+                    "slot": 1
+                },
+                {
+                    "id": "guide_score3",
+                    "height": 1.5,
                     "slot": 1
                 }
             ]
@@ -156,7 +166,12 @@
             "objects": [
                 {
                     "id": "item__001",
-                    "height": 1.0,
+                    "height": 1.5,
+                    "slot": 1
+                },
+                {
+                    "id": "guide_score2",
+                    "height": 2.200000047683716,
                     "slot": 1
                 }
             ]
@@ -1358,6 +1373,11 @@
                 {
                     "id": "item__003",
                     "height": 1.0,
+                    "slot": 1
+                },
+                {
+                    "id": "guide_heal",
+                    "height": 1.5,
                     "slot": 1
                 }
             ]

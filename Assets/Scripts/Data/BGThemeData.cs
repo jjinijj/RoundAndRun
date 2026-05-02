@@ -14,6 +14,7 @@ public class BGThemeData : ScriptableObject
 {
     public string themeName;
     public AudioClip bgmClip;
+    public Tile tilePrefab;
     public GameObject[] bgTilePrefabs;
     public GameObject[] decorationPrefabs;
     public float decorationSpawnChance;

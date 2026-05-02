@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44290916c5a494d38a819714d88139f2, type: 3}
   m_Name: CityTheme
   m_EditorClassIdentifier: 
-  themeName: 
+  themeName: City
   bgmClip: {fileID: 8300000, guid: b800c59df8bce4e4d931c4b162e6f3db, type: 3}
   bgTilePrefabs:
   - {fileID: 5454299119466096183, guid: 39c0f0148c9924afb8c6a4dbae83918e, type: 3}
@@ -39,3 +39,15 @@ MonoBehaviour:
   - id: guide_slide
     displayName: 
     prefab: {fileID: 2424691907005677002, guid: 75c5ae6e0ae6e4448b661c5275e84a08, type: 3}
+  - id: guide_score
+    displayName: 
+    prefab: {fileID: 947805847688781101, guid: f6d6b1ee615664fb9a7e29dc074e1a03, type: 3}
+  - id: guide_heal
+    displayName: 
+    prefab: {fileID: 2844170425411455204, guid: ac756c0a8178c40fca86624d453e5827, type: 3}
+  - id: guide_score2
+    displayName: 
+    prefab: {fileID: 5229686229937373659, guid: 20c812747d650484f975312aa9c71cd8, type: 3}
+  - id: guide_score3
+    displayName: 
+    prefab: {fileID: 3436251906599674085, guid: 638d6e3f499c341a5a76fc984cab225b, type: 3}

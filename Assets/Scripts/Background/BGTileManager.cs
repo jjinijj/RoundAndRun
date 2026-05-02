@@ -20,6 +20,7 @@ public class BGTileManager : MonoBehaviour
     private List<Queue<GameObject>> decorationPools = new();
     private List<BGTile> activeTilesLeft = new();
     private List<BGTile> activeTilesRight = new();
+    private HashSet<BGTile> staleTiles = new();
     private bool isRunning = false;
 
     void Start()
@@ -143,7 +144,17 @@ public class BGTileManager : MonoBehaviour
         if (oldest.transform.position.z >= player.position.z - tileLength) return;
 
         activeTiles.RemoveAt(0);
-        RecycleTile(oldest);
+
+        if (staleTiles.Remove(oldest))
+        {
+            if (oldest.decoration != null) Destroy(oldest.decoration);
+            Destroy(oldest.gameObject);
+        }
+        else
+        {
+            RecycleTile(oldest);
+        }
+
         SpawnTile(activeTiles, x);
     }
 
@@ -159,6 +170,23 @@ public class BGTileManager : MonoBehaviour
         tile.ResetState();
         tile.gameObject.SetActive(false);
         tilePools[tile.prefabIndex].Enqueue(tile);
+    }
+
+    public void SetTheme(BGThemeData data)
+    {
+        foreach (var tile in activeTilesLeft) staleTiles.Add(tile);
+        foreach (var tile in activeTilesRight) staleTiles.Add(tile);
+
+        foreach (var pool in tilePools)
+            while (pool.Count > 0) Destroy(pool.Dequeue().gameObject);
+        tilePools.Clear();
+
+        foreach (var pool in decorationPools)
+            while (pool.Count > 0) Destroy(pool.Dequeue());
+        decorationPools.Clear();
+
+        themeData = data;
+        InitPools();
     }
 
     public void StartGame() => isRunning = true;

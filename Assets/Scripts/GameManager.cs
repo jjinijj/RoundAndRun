@@ -1,12 +1,11 @@
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 public class GameManager : MonoBehaviour
 {
 
     [SerializeField] private PlayerState playerState;
     [SerializeField] private GameSettings gameSettings;
-    [SerializeField] private BGThemeData currentTheme;
+    [SerializeField] private LevelManager levelManager;
     [SerializeField] private PlayerController playerController;
     [SerializeField] private TileManager tileManager;
     [SerializeField] private BGTileManager bgTileManager;
@@ -39,18 +38,16 @@ public class GameManager : MonoBehaviour
     public void GameStart()
     {
         playerState.Reset();
-        playerController.OnRun();
+        levelManager.Reset();
+        levelManager.LoadCurrentLevel();
 
+        playerController.OnRun();
         tileManager.StartGame();
         bgTileManager.StartGame();
         cameraController.StartRun();
 
         uimanager.ShowIngameUI();
         Time.timeScale = 1f;
-
-        if(currentTheme != null && currentTheme.bgmClip != null)
-            SoundManager.Instance.PlayBGM(currentTheme.bgmClip, true);
-
         isPlaying = true;
     }
 
