@@ -8,10 +8,12 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private LevelLoader levelLoader;
 
     private int currentLevelIndex = 0;
+    private AudioClip pendingBGM;
 
     void Start()
     {
         tileManager.onLevelComplete += OnLevelComplete;
+        tileManager.onStaleTilesCleared += OnStaleTilesCleared;
     }
 
     public void LoadCurrentLevel()
@@ -19,10 +21,17 @@ public class LevelManager : MonoBehaviour
         LevelEntry entry = levelDatabase.levels[currentLevelIndex];
         LevelData levelData = levelLoader.LoadByName(entry.levelJsonName);
 
+        pendingBGM = entry.themeData.bgmClip;
+
         tileManager.SetTheme(entry.themeData);
         tileManager.SetLevel(levelData);
         bgTileManager.SetTheme(entry.themeData);
-        SoundManager.Instance.PlayBGM(entry.themeData.bgmClip, true);
+    }
+
+    void OnStaleTilesCleared()
+    {
+        if (pendingBGM != null)
+            SoundManager.Instance.PlayBGM(pendingBGM, true);
     }
 
     void OnLevelComplete()
@@ -34,7 +43,7 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("모든 레벨 완주");
+            LoadCurrentLevel();
         }
     }
 
@@ -46,5 +55,6 @@ public class LevelManager : MonoBehaviour
     void OnDestroy()
     {
         tileManager.onLevelComplete -= OnLevelComplete;
+        tileManager.onStaleTilesCleared -= OnStaleTilesCleared;
     }
 }

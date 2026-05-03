@@ -1,11 +1,9 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BGTileManager : MonoBehaviour
 {
-    [Header("Theme")]
-    [SerializeField] private BGThemeData themeData;
-
     [Header("Settings")]
     [SerializeField] private GameSettings gameSettings;
     [SerializeField] private float tileLength = 10f;
@@ -16,22 +14,15 @@ public class BGTileManager : MonoBehaviour
     [Header("Player Reference")]
     [SerializeField] private Transform player;
 
+    private BGThemeData themeData;
     private List<Queue<BGTile>> tilePools = new();
     private List<Queue<GameObject>> decorationPools = new();
     private List<BGTile> activeTilesLeft = new();
     private List<BGTile> activeTilesRight = new();
     private HashSet<BGTile> staleTiles = new();
+    private Coroutine themeCoroutine;
     private bool isRunning = false;
 
-    void Start()
-    {
-        InitPools();
-        for (int i = 0; i < initialTileCount; i++)
-        {
-            SpawnTile(activeTilesLeft, -xOffset);
-            SpawnTile(activeTilesRight, xOffset);
-        }
-    }
 
     void InitPools()
     {
@@ -51,6 +42,43 @@ public class BGTileManager : MonoBehaviour
                 q.Enqueue(CreateDecoration(i));
             decorationPools.Add(q);
         }
+    }
+
+    IEnumerator InitPoolsGradually()
+    {
+        for (int i = 0; i < themeData.bgTilePrefabs.Length; i++)
+        {
+            var q = new Queue<BGTile>();
+            tilePools.Add(q);
+            for (int j = 0; j < 3; j++)
+            {
+                q.Enqueue(CreateTile(i));
+                yield return null;
+            }
+        }
+
+        if (themeData.decorationPrefabs != null)
+        {
+            for (int i = 0; i < themeData.decorationPrefabs.Length; i++)
+            {
+                var q = new Queue<GameObject>();
+                decorationPools.Add(q);
+                for (int j = 0; j < 3; j++)
+                {
+                    q.Enqueue(CreateDecoration(i));
+                    yield return null;
+                }
+            }
+        }
+
+        for (int i = 0; i < initialTileCount; i++)
+        {
+            SpawnTile(activeTilesLeft, -xOffset);
+            SpawnTile(activeTilesRight, xOffset);
+            yield return null;
+        }
+
+        themeCoroutine = null;
     }
 
     BGTile CreateTile(int index)
@@ -103,14 +131,15 @@ public class BGTileManager : MonoBehaviour
 
     BGTile GetFromTilePool(int index)
     {
-        if (tilePools[index].Count > 0)
+        // 코루틴 중 아직 생성 안 된 풀 인덱스는 직접 생성
+        if (index < tilePools.Count && tilePools[index].Count > 0)
             return tilePools[index].Dequeue();
         return CreateTile(index);
     }
 
     GameObject GetFromDecorationPool(int index)
     {
-        if (decorationPools[index].Count > 0)
+        if (index < decorationPools.Count && decorationPools[index].Count > 0)
             return decorationPools[index].Dequeue();
         return CreateDecoration(index);
     }
@@ -174,6 +203,8 @@ public class BGTileManager : MonoBehaviour
 
     public void SetTheme(BGThemeData data)
     {
+        if (themeCoroutine != null) StopCoroutine(themeCoroutine);
+
         foreach (var tile in activeTilesLeft) staleTiles.Add(tile);
         foreach (var tile in activeTilesRight) staleTiles.Add(tile);
 
@@ -186,7 +217,20 @@ public class BGTileManager : MonoBehaviour
         decorationPools.Clear();
 
         themeData = data;
-        InitPools();
+
+        if (isRunning)
+        {
+            themeCoroutine = StartCoroutine(InitPoolsGradually());
+        }
+        else
+        {
+            InitPools();
+            for (int i = 0; i < initialTileCount; i++)
+            {
+                SpawnTile(activeTilesLeft, -xOffset);
+                SpawnTile(activeTilesRight, xOffset);
+            }
+        }
     }
 
     public void StartGame() => isRunning = true;

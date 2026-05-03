@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f731a2ae89bef7a47a008811dfbd4680, type: 2}
+  - {fileID: 2100000, guid: e1079cf51437d4320be0fd29855437e9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,8 +99,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileType: 0
   tileLength: 2
-  item: {fileID: 0}
-  obstacle: {fileID: 0}
 --- !u!65 &-4577816251732471802
 BoxCollider:
   m_ObjectHideFlags: 0

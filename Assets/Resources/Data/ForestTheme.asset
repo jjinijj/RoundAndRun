@@ -14,15 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   themeName: Forest
   bgmClip: {fileID: 8300000, guid: 7670926c912ae463ba1ac2f20bc7ef48, type: 3}
+  tilePrefab: {fileID: 6009308099482141407, guid: ea63f3d32aa0b4182b7fe2165f5469db, type: 3}
   bgTilePrefabs:
   - {fileID: 7281618184335796151, guid: 8a12185f7b49448c791371ed03ad6cb3, type: 3}
   decorationPrefabs:
-  - {fileID: 8098965172995994260, guid: 4dbdf9e19692442229af31fee44c1088, type: 3}
-  - {fileID: 6075856134601269642, guid: 42da2959bd1b54a7588585f3af938d5f, type: 3}
-  - {fileID: 29445271636417558, guid: 020d4ecea4143416d8520c63e7666383, type: 3}
-  - {fileID: 6556834996415102009, guid: 8910c1812065c427797d2a6fa1951dc1, type: 3}
+  - {fileID: 942189051364659310, guid: 4dbdf9e19692442229af31fee44c1088, type: 3}
+  - {fileID: 3636912571079519177, guid: 42da2959bd1b54a7588585f3af938d5f, type: 3}
+  - {fileID: 6408953045177101132, guid: 020d4ecea4143416d8520c63e7666383, type: 3}
+  - {fileID: 4120951235277623361, guid: 4898622b2ea1b4377b8e7e8a836e3b95, type: 3}
   - {fileID: 507032817324450796, guid: 8868e1e84d3f048dda8e90333aaa5ba2, type: 3}
-  decorationSpawnChance: 0.3
+  decorationSpawnChance: 0.6
   objects:
   - id: jump_fence
     displayName: 

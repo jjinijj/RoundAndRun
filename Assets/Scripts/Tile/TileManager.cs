@@ -6,7 +6,6 @@ public class TileManager : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private GameSettings gameSettings;
-    [SerializeField] private BGThemeData themeData;
     [SerializeField] private ItemDatabase itemDatabase;
     [SerializeField] private int initialTileCount = 5;
 
@@ -15,7 +14,9 @@ public class TileManager : MonoBehaviour
 
     public Action onTilePassed;
     public Action onLevelComplete;
+    public Action onStaleTilesCleared;
 
+    private BGThemeData themeData;
     private Queue<Tile> tilePool = new();
     private Dictionary<string, Queue<GameObject>> objectPools = new();
     private Dictionary<string, Queue<GameObject>> itemPools = new();
@@ -27,8 +28,6 @@ public class TileManager : MonoBehaviour
 
     void Start()
     {
-        InitTilePool();
-        InitObjectPools();
         InitItemPools();
     }
 
@@ -87,6 +86,9 @@ public class TileManager : MonoBehaviour
         themeData = data;
         InitTilePool();
         InitObjectPools();
+
+        if (staleTiles.Count == 0)
+            onStaleTilesCleared?.Invoke();
     }
 
     public void SetLevel(LevelData data)
@@ -225,6 +227,8 @@ public class TileManager : MonoBehaviour
         {
             foreach (var child in oldest.DetachAll()) Destroy(child);
             Destroy(oldest.gameObject);
+            if (staleTiles.Count == 0)
+                onStaleTilesCleared?.Invoke();
         }
         else
         {
