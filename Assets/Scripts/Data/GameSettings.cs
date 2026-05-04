@@ -5,6 +5,7 @@ using UnityEngine.Android;
 public class GameSettings : ScriptableObject
 {
     public float tileSpeed = 10f;
+    public float tileLength = 2f;
 
     public int maxLife = 5;
 

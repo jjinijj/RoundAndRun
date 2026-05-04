@@ -6,7 +6,6 @@ public enum TileType { Empty, Obstacle, Item }
 public class Tile : MonoBehaviour
 {
     public TileType tileType;
-    public float tileLength = 10f;
 
     private readonly List<GameObject> dynamicChildren = new();
 

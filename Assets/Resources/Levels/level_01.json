@@ -1,5 +1,7 @@
 {
-    "theme": "",
+    "theme": "CityTheme",
+    "initialSpeed": 5.0,
+    "maxSpeed": 7.0,
     "tiles": [
         {
             "tile": "Empty",

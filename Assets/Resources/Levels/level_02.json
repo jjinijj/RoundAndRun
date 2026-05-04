@@ -1,5 +1,7 @@
 {
     "theme": "ForestTheme",
+    "initialSpeed": 7.0,
+    "maxSpeed": 9.0,
     "tiles": [
         {
             "tile": "Empty",

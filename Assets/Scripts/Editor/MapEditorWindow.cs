@@ -11,6 +11,8 @@ public class MapEditorWindow : EditorWindow
     private ItemDatabase itemDatabase;
     private List<TileData> tiles = new();
     private string levelName = "level_01";
+    private float initialSpeed = 5f;
+    private float maxSpeed = 10f;
     private Vector2 scrollPos;
     private ReorderableList reorderableList;
 
@@ -137,6 +139,8 @@ public class MapEditorWindow : EditorWindow
         themeData = (BGThemeData)EditorGUILayout.ObjectField("Theme", themeData, typeof(BGThemeData), false);
         itemDatabase = (ItemDatabase)EditorGUILayout.ObjectField("Item Database", itemDatabase, typeof(ItemDatabase), false);
         levelName = EditorGUILayout.TextField("Level Name", levelName);
+        initialSpeed = EditorGUILayout.FloatField("Initial Speed", initialSpeed);
+        maxSpeed = EditorGUILayout.FloatField("Max Speed", maxSpeed);
         EditorGUILayout.Space();
     }
 
@@ -184,6 +188,8 @@ public class MapEditorWindow : EditorWindow
 
         LevelData data = JsonUtility.FromJson<LevelData>(File.ReadAllText(path));
         tiles = new List<TileData>(data.tiles);
+        initialSpeed = data.initialSpeed;
+        maxSpeed = data.maxSpeed;
         BuildReorderableList();
 
         if (!string.IsNullOrEmpty(data.theme))
@@ -233,6 +239,8 @@ public class MapEditorWindow : EditorWindow
         LevelData data = new LevelData
         {
             theme = themeData.name,
+            initialSpeed = initialSpeed,
+            maxSpeed = maxSpeed,
             tiles = tiles.ToArray()
         };
 

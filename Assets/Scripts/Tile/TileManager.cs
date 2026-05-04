@@ -155,7 +155,7 @@ public class TileManager : MonoBehaviour
         Tile tile = GetFromTilePool();
 
         float spawnZ = activeTiles.Count > 0
-            ? activeTiles[activeTiles.Count - 1].transform.position.z + activeTiles[activeTiles.Count - 1].tileLength
+            ? activeTiles[activeTiles.Count - 1].transform.position.z + gameSettings.tileLength
             : 0f;
 
         tile.transform.position = new Vector3(0, -1f, spawnZ);
@@ -218,7 +218,7 @@ public class TileManager : MonoBehaviour
         if (activeTiles.Count == 0) return;
 
         Tile oldest = activeTiles[0];
-        if (oldest.transform.position.z >= player.position.z - oldest.tileLength) return;
+        if (oldest.transform.position.z >= player.position.z - gameSettings.tileLength) return;
 
         activeTiles.RemoveAt(0);
         onTilePassed?.Invoke();
