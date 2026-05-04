@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
         levelManager.Reset();
         levelManager.LoadCurrentLevel();
 
+        levelManager.StartGame();
         playerController.OnRun();
         tileManager.StartGame();
         bgTileManager.StartGame();
@@ -55,6 +56,9 @@ public class GameManager : MonoBehaviour
     {
         if (!isPlaying) return;
         Time.timeScale = 0f;
+        tileManager.PauseGame();
+        bgTileManager.PauseGame();
+        levelManager.PauseGame();
         SoundManager.Instance.PauseBGM();
         uimanager.ShowPauseUI();
     }
@@ -62,6 +66,9 @@ public class GameManager : MonoBehaviour
     public void Resume()
     {
         Time.timeScale = 1f;
+        tileManager.ResumeGame();
+        bgTileManager.ResumeGame();
+        levelManager.ResumeGame();
         SoundManager.Instance.ResumeBGM();
         uimanager.HidePauseUI();
     }

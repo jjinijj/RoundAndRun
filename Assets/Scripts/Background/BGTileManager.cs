@@ -154,9 +154,9 @@ public class BGTileManager : MonoBehaviour
     void MoveTiles()
     {
         foreach (var tile in activeTilesLeft)
-            tile.transform.position += Vector3.back * gameSettings.tileSpeed * Time.deltaTime;
+            tile.transform.position += gameSettings.currentSpeed * Time.deltaTime * Vector3.back;
         foreach (var tile in activeTilesRight)
-            tile.transform.position += Vector3.back * gameSettings.tileSpeed * Time.deltaTime;
+            tile.transform.position += gameSettings.currentSpeed * Time.deltaTime * Vector3.back;
     }
 
     void CheckRecycle()
@@ -235,4 +235,5 @@ public class BGTileManager : MonoBehaviour
 
     public void StartGame() => isRunning = true;
     public void PauseGame() => isRunning = false;
+    public void ResumeGame() => isRunning = true;
 }
