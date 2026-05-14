@@ -30,10 +30,16 @@ MonoBehaviour:
     prefab: {fileID: 8908878803522692621, guid: 91cb91cbe936d44f6b441e29b2599276, type: 3}
   - id: slide_sign
     displayName: 
-    prefab: {fileID: 8779359603821151704, guid: e7348d0be30f242a6b8958184221e4a5, type: 3}
+    prefab: {fileID: 2843898244477942355, guid: fdb0b399921c74bd794c8530b373a5ed, type: 3}
   - id: jump_stump
     displayName: 
     prefab: {fileID: 7909592730836745192, guid: bb18b25a493484119bd95d7acc1ee223, type: 3}
-  - id: slide_broken
+  - id: slide_broken_pine
     displayName: 
     prefab: {fileID: 7777748416863851315, guid: b5fe5252e5850469cbe241fcf267d084, type: 3}
+  - id: slide_sign_single
+    displayName: 
+    prefab: {fileID: 4237115177432684152, guid: d8e7e6ffeb652467b92bcd14e32d39da, type: 3}
+  - id: jump_treebranch
+    displayName: 
+    prefab: {fileID: 4088049817702425328, guid: a465655996c814c85a39181fbb7c6ac2, type: 3}

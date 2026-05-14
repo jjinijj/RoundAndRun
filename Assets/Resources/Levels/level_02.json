@@ -105,7 +105,7 @@
             "tile": "Empty",
             "objects": [
                 {
-                    "id": "slide_broken",
+                    "id": "jump_treebranch",
                     "height": 1.0,
                     "slot": 1
                 }
@@ -137,7 +137,13 @@
         },
         {
             "tile": "Empty",
-            "objects": []
+            "objects": [
+                {
+                    "id": "slide_sign_single",
+                    "height": 1.0,
+                    "slot": 1
+                }
+            ]
         },
         {
             "tile": "Empty",
