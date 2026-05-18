@@ -259,8 +259,8 @@
             "tile": "Empty",
             "objects": [
                 {
-                    "id": "obstacle__001",
-                    "height": 0.0,
+                    "id": "obstacle_jump",
+                    "height": 1.0,
                     "slot": 1
                 }
             ]

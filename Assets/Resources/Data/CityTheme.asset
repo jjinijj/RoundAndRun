@@ -52,3 +52,6 @@ MonoBehaviour:
   - id: guide_score3
     displayName: 
     prefab: {fileID: 3436251906599674085, guid: 638d6e3f499c341a5a76fc984cab225b, type: 3}
+  - id: obstacle_jump
+    displayName: 
+    prefab: {fileID: 7706763507899121362, guid: 115159e898c544242a02ec9bd503b2f5, type: 3}

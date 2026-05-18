@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: LevelDatabase
   m_EditorClassIdentifier: 
   levels:
+  - levelJsonName: level_01
+    themeData: {fileID: 11400000, guid: f5835f1651a76482486e78d214c9372f, type: 2}
   - levelJsonName: level_02
     themeData: {fileID: 11400000, guid: 3c1f9e8a9ad4e40fda5cf981a95cb0a2, type: 2}
